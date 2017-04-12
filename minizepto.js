@@ -66,7 +66,7 @@ var Zepto = (function() {
         init: function(selector) {
             var dom;
             if (!selector) {
-                return this.Z()
+                return new Z()
             } else if (typeof selector == 'string') {
                 selector = selector.trim()
                 dom = zepto.qsa(document, selector)
