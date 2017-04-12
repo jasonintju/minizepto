@@ -69,7 +69,7 @@ var Zepto = (function() {
                 return new Z()
             } else if (typeof selector == 'string') {
                 selector = selector.trim()
-                dom = zepto.qsa(document, selector)
+                dom = this.qsa(document, selector)
             } else if (isFunction(selector)) {
                 return $(document).ready(selector)
             } else if (this.isZ(selector)) {
@@ -79,7 +79,7 @@ var Zepto = (function() {
             } else if (isObject(selector)) {
                 dom = [selector], selector = null
             } else {
-                dom = zepto.qsa(document, selector)
+                dom = this.qsa(document, selector)
             }
 
             return new Z(dom, selector);

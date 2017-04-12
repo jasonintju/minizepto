@@ -184,7 +184,7 @@ zepto = {
             return new Z()
         } else if (typeof selector == 'string') {
             selector = selector.trim()
-            dom = zepto.qsa(document, selector)
+            dom = this.qsa(document, selector)
         } else if (isFunction(selector)) {
             return $(document).ready(selector)
         } else if (this.isZ(selector)) {
@@ -194,7 +194,7 @@ zepto = {
         } else if (isObject(selector)) {
             dom = [selector], selector = null
         } else {
-            dom = zepto.qsa(document, selector)
+            dom = this.qsa(document, selector)
         }
 
         return new Z(dom, selector);
@@ -212,6 +212,6 @@ zepto = {
 ---
 自此，我们明白了代码的组织结构及关键的zepto.init函数和Z函数，整个dom库的骨架已经成型，接下来就是一点一点地添加API，逐步完善minizepto.js。
 
-我会按照代码版本tag来逐步添加API，每个tag有哪些新增及修改内容都会记录在CHANGELOG.md中，有兴趣的同学可以跟着一块学习，共同进步。
+我会按照代码版本tag来逐步添加API，每个tag有哪些新增及修改内容都会记录在CHANGELOG.md中，有兴趣的同学可以一块学习，共同进步。
 
 项目地址：[https://github.com/jasonintju/minizepto](https://github.com/jasonintju/minizepto)
